@@ -39,7 +39,7 @@ class FrasesController extends \BaseController {
         $frase->fill($data);
         $frase->save();
 
-        return Redirect::route('frases.index');
+        return Redirect::route('frases.create');
 	}
 
 	/**
