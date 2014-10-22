@@ -1,0 +1,2 @@
+[09-Oct-2014 22:26:36 UTC] PHP Fatal error:  Class 'Frases' not found in /var/www/freelance/aldo/anotaciones_backend/app/controllers/FrasesController.php on line 13
+[09-Oct-2014 22:27:19 UTC] PHP Fatal error:  Class 'Frases' not found in /var/www/freelance/aldo/anotaciones_backend/app/controllers/FrasesController.php on line 13
