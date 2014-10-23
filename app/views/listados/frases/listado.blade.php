@@ -2,7 +2,7 @@
 @section('contenido')
 <div class="row">
     <div class="col-md-12">
-        <table class="table table-bordered table-striped">
+        <table id="table-listado-frases" class="table table-bordered table-striped">
             <tr>
                 <th>#</th>
                 <th>Autor</th>
@@ -18,4 +18,11 @@
         </table>
     </div>
 </div>
+@stop
+@section('scripts')
+<script type="text/javascript">
+    $(function(){
+        $("#table-listado-frases").dataTable();
+    });
+</script>
 @stop

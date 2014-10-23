@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>@yield('title', 'Sistema de Participación Ciudadana')</title>
+    <title>@yield('title', Config::get('app.name_system'))</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{ URL::asset('bootstrap/images/favicon.png')}}">
     <!-- Bootstrap core CSS -->
@@ -11,6 +11,7 @@
     {{ HTML::style('bootstrap/dist/css/navbar-static-top.css', array('media' => 'all')) }}
     {{ HTML::style('assets/css/ladda-themeless.min.css') }}
     {{ HTML::style('assets/css/main.css',array('media'=>'all')) }}
+    {{ HTML::style('datatables/css/datatables.bootstrap.css',array('rel'=>'stylesheet')) }}
 
     <style type="text/css" media="all">
         @font-face {
@@ -94,6 +95,8 @@
 {{ HTML::script('assets/js/spin.min.js') }}
 {{ HTML::script('assets/js/ladda.min.js') }}
 {{ HTML::script('assets/js/main.js') }}
+{{ HTML::script('datatables/js/jquery.dataTables.min.js') }}
+{{ HTML::script('datatables/js/dataTables.bootstrap.js') }}
 @yield('scripts')
 </body>
 </html>
