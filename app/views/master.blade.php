@@ -43,8 +43,8 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#"
-               style="background-image:url({{ URL::asset('bootstrap/images/biblioco34.jpg') }}); background-position:center left; background-repeat:no-repeat; padding-left:60px; padding-top:7px">Historico de Frases<br/><span
-                    style="font-family: Arial, Helvetica, sans-serif; font-size:10px;">Liceo</span></a>
+               style="background-image:url({{ URL::asset('bootstrap/images/biblioco34.jpg') }}); background-position:center left; background-repeat:no-repeat; padding-left:60px; padding-top:7px">{{Config::get('app.name_system')}}<br/><span
+                    style="font-family: Arial, Helvetica, sans-serif; font-size:10px;">{{Config::get('app.sub_name_system')}}</span></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -84,7 +84,7 @@
 
 <div id="footer" style="margin-bottom:10px" class="not-view-print">
     <div class="container">
-        <p class="text-muted">Liceo - Historico de Frases</p>
+        <p class="text-muted">{{Config::get('app.sub_name_system')}} - {{Config::get('app.name_system')}}</p>
     </div>
 </div>
 {{ HTML::script('assets/js/jquery.min.js') }}

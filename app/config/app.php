@@ -191,4 +191,7 @@ return array(
 
 	),
 
+    'name_system' => 'Bliblioco 34',
+    'sub_name_system' => 'LMGSM',
+
 );
