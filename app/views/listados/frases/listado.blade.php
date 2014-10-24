@@ -36,7 +36,11 @@
     $(document).ready(function(){
         $("#table-listado-frases").dataTable({
             "bProcessing" : true,
-            "language": {"url": "//cdn.datatables.net/plug-ins/380cb78f450/i18n/Spanish.json"}
+            "language": {"url": "//cdn.datatables.net/plug-ins/380cb78f450/i18n/Spanish.json"},
+            "lengthMenu" : [
+                [5,10,20,-1],
+                [5,10,20,"Todas"]
+            ]
         });
     });
 </script>
