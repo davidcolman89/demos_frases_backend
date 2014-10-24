@@ -6,8 +6,8 @@
 }
 </style>
 <div class="row jumbotron">
-    <div class="col-md-12">
-        <table id="table-listado-frases" class="display table table-bordered table-striped">
+    <div class="col-xs-12 col-sm-9 col-md-12">
+        <table id="table-listado-frases" class="display table table-bordered table-striped table-responsive">
         <thead>
         <tr>
             <th>Autor</th>
