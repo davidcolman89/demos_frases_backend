@@ -11,7 +11,7 @@
     {{ HTML::style('bootstrap/dist/css/navbar-static-top.css', array('media' => 'all')) }}
     {{ HTML::style('assets/css/ladda-themeless.min.css') }}
     {{ HTML::style('assets/css/main.css',array('media'=>'all')) }}
-    {{ HTML::style('datatables/css/datatables.bootstrap.css',array('rel'=>'stylesheet')) }}
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/380cb78f450/integration/bootstrap/3/dataTables.bootstrap.css">
 
     <style type="text/css" media="all">
         @font-face {
@@ -43,9 +43,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"
-               style="background-image:url({{ URL::asset('bootstrap/images/biblioco34.jpg') }}); background-position:center left; background-repeat:no-repeat; padding-left:60px; padding-top:7px">{{Config::get('app.name_system')}}<br/><span
-                    style="font-family: Arial, Helvetica, sans-serif; font-size:10px;">{{Config::get('app.sub_name_system')}}</span></a>
+            <a class="navbar-brand" href="#" style="background-image:url('{{ URL::asset('bootstrap/images/biblioco34.jpg') }}'); background-position:center left; background-repeat:no-repeat; padding-left:60px; padding-top:7px">
+                {{Config::get('app.name_system')}}
+                <br/>
+                <span style="font-family: Arial, Helvetica, sans-serif; font-size:10px;">{{Config::get('app.sub_name_system')}}</span>
+            </a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -79,7 +81,7 @@
 </div>
 
 <!-- Fin Static navbar -->
-<div class="container contenedor">
+<div class="container">
     @yield('contenido')
 </div>
 
@@ -88,15 +90,14 @@
         <p class="text-muted">{{Config::get('app.sub_name_system')}} - {{Config::get('app.name_system')}}</p>
     </div>
 </div>
-{{ HTML::script('assets/js/jquery.min.js') }}
+<script type="text/javascript" language="javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 {{ HTML::script('assets/js/jquery-ui.min.js') }}
 {{ HTML::script('bootstrap/dist/js/bootstrap.min.js') }}
 {{ HTML::script('assets/js/fullscreen.js') }}
 {{ HTML::script('assets/js/spin.min.js') }}
 {{ HTML::script('assets/js/ladda.min.js') }}
-{{ HTML::script('assets/js/main.js') }}
-{{ HTML::script('datatables/js/jquery.dataTables.min.js') }}
-{{ HTML::script('datatables/js/dataTables.bootstrap.js') }}
+<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/380cb78f450/integration/bootstrap/3/dataTables.bootstrap.js"></script>
 @yield('scripts')
 </body>
 </html>

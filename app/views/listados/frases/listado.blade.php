@@ -1,28 +1,38 @@
 @extends('master')
 @section('contenido')
-<div class="row">
+<style>
+#table-listado-frases {
+    margin-top: 50px;
+}
+</style>
+<div class="row jumbotron">
     <div class="col-md-12">
-        <table id="table-listado-frases" class="table table-bordered table-striped">
-            <tr>
-                <th>#</th>
-                <th>Autor</th>
-                <th>Frase</th>
-            </tr>
-            @foreach($frases as $frase)
-            <tr>
-                <td>{{$frase->id}}</td>
-                <td>{{$frase->autor}}</td>
-                <td>{{$frase->texto}}</td>
-            </tr>
-            @endforeach
+        <table id="table-listado-frases" class="display table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Autor</th>
+            <th>Frase</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach($frases as $frase)
+        <tr>
+            <td>{{$frase->autor}}</td>
+            <td>{{$frase->texto}}</td>
+        </tr>
+        @endforeach
+        </tbody>
         </table>
     </div>
 </div>
 @stop
 @section('scripts')
 <script type="text/javascript">
-    $(function(){
-        $("#table-listado-frases").dataTable();
+    $(document).ready(function(){
+        $("#table-listado-frases").dataTable({
+            "bProcessing" : true,
+            "language": {"url": "//cdn.datatables.net/plug-ins/380cb78f450/i18n/Spanish.json"}
+        });
     });
 </script>
 @stop
