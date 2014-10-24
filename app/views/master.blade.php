@@ -81,7 +81,7 @@
 </div>
 
 <!-- Fin Static navbar -->
-<div class="container">
+<div class="container contenedor">
     @yield('contenido')
 </div>
 

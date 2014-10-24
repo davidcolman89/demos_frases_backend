@@ -5,7 +5,12 @@
     margin-top: 50px;
 }
 </style>
-<div class="row jumbotron">
+<div class="row">
+    <div class="col-xs-12 col-sm-9 col-md-12">
+        <h1>Frases</h1>
+    </div>
+</div>
+<div class="row">
     <div class="col-xs-12 col-sm-9 col-md-12">
         <table id="table-listado-frases" class="display table table-bordered table-striped table-responsive">
         <thead>
