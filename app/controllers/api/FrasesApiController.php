@@ -122,10 +122,8 @@ class FrasesApiController extends ApiController {
 
     public function index()
     {
-        $limit = Input::get('limit', static::LIMIT_PAGINATE);
-        $frase = $this->model->paginate($limit);
-
-        return $this->respondWithPagination($frase, [
+        $frase = $this->model->all();
+        return $this->respond([
             'data' => $this->fraseTransformer->transformCollection($frase->all()),
         ]);
     }
