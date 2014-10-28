@@ -26,10 +26,10 @@ return array(
     ),
 
     'paths' => array(
-        'api/*' => array(
+        '^/v1/frases/*' => array(
             'allowedOrigins' => array('*'),
             'allowedHeaders' => array('*'),
-            'allowedMethods' => array('*'),
+            'allowedMethods' => array('POST', 'GET'),
             'maxAge' => 3600,
         ),
         '*' => array(
