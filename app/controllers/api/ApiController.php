@@ -148,7 +148,8 @@ class ApiController extends \BaseController
                 'total_pages' => ceil($items->getTotal()  / $items->getPerPage()),
                 'current_page' => $items->getCurrentPage(),
                 'limit' => $items->getPerPage(),
-            ]
+            ],
+            'error' => false,
         ]);
 
         return $this->respond($data);
@@ -163,6 +164,7 @@ class ApiController extends \BaseController
     protected function respondCreated($message, $itemId = null)
     {
         $data = [
+            'error' => false,
             'message' => $message,
             'last_insert_id' => $itemId,
         ];
