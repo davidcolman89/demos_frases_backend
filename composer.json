@@ -10,7 +10,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
         "barryvdh/laravel-debugbar": "1.*",
-        "maatwebsite/excel": "1.0.7"
+        "maatwebsite/excel": "1.0.7",
+        "barryvdh/laravel-cors":"0.2.x"
 	},
 	"autoload": {
         "psr-4": {

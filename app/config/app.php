@@ -188,8 +188,10 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+        'CorsServiceProvider' => 'Barryvdh\Cors\CorsServiceProvider',
 
-	),
+
+    ),
 
     'name_system' => 'Bliblioco 34',
     'sub_name_system' => 'LMGSM',
