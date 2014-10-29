@@ -128,6 +128,16 @@ class FrasesApiController extends ApiController {
         ]);
     }
 
+    public function showWithPaginate()
+    {
+        $limit = Input::get('limit', static::LIMIT_PAGINATE);
+        $frase = $this->model->paginate($limit);
+
+        return $this->respondWithPagination($frase, [
+            'data' => $this->fraseTransformer->transformCollection($frase->all()),
+        ]);
+    }
+
     public function store()
     {
         $this->fillFieldsForCreateProcess();
