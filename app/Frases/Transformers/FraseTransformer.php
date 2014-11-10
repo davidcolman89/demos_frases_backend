@@ -8,7 +8,7 @@ class FraseTransformer extends Transformer
         return [
             'id' => $frase['id'],
             'autor' => $frase['autor'],
-            'texto' => $frase['texto'],
+            'texto' => nl2br($frase['texto']),
         ];
     }
 }
