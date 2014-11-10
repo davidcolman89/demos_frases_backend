@@ -122,7 +122,7 @@ class FrasesApiController extends ApiController {
 
     public function index()
     {
-        $frase = $this->model->all();
+        $frase = $this->model->orderBy('id','desc')->get();
         return $this->respond([
             'data' => $this->fraseTransformer->transformCollection($frase->all()),
         ]);
