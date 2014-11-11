@@ -5,6 +5,7 @@ Route::resource('frases','FrasesController');
 
 Route::group(array('prefix' => 'v1'), function()
 {
+    Log::info($_SERVER['REMOTE_ADDR']);
     /**
      * API - Contactos
     | GET|HEAD v1/frases
